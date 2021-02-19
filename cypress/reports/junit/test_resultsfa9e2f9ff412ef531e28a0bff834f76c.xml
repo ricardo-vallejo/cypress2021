@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="39.6610" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-02-18T22:35:21" tests="0" file="cypress/integration/cucumber/dashboard.feature" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="dashboard" timestamp="2021-02-18T22:35:21" tests="1" time="39.6610" failures="0">
+    <testcase name="dashboard Validating dashboard S4N Campus elements" time="39.6610" classname="Validating dashboard S4N Campus elements">
+    </testcase>
+  </testsuite>
+</testsuites>

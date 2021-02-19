@@ -1,0 +1,24 @@
+{
+
+    "devDependencies": {
+        "cypress": "^6.4.0",
+        "cypress-cucumber-preprocessor": "^4.0.1",
+        "cypress-multi-reporters": "^1.4.0",
+        "mocha": "^8.3.0",
+        "mocha-junit-reporter": "^2.0.0",
+        "mochawesome": "^6.2.1",
+        "mochawesome-merge": "^4.2.0",
+        "mochawesome-report-generator": "^5.1.0"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+      },
+    "scripts": {
+        "clean:reports": "rm -rfv ./htmlReport && rm -rfv ./cypress/reports/mocha/*.json && rm -rfv ./cypress/videos/*.mp4 && rm -rfv ./cypress/reports/junit/*.xml",
+        "s4nCampus:test:login": "npx cypress run --spec /Users/yesidmontoya/Desktop/cypress2021/cypress/integration/cucumber/login.feature  --browser chrome",
+        "htmlTest": "npx marge cypress/reports/mocha/*.json -f report -o htmlReport",
+        "s4nCampus:login": "npm run clean:reports && npm run s4nCampus:test:login && npm run htmlTest",
+        "s4nCampus:test:dashboard": "npx cypress run --spec /Users/yesidmontoya/Desktop/cypress2021/cypress/integration/cucumber/dashboard.feature  --browser chrome",
+        "s4nCampus:dashboard": "npm run clean:reports && npm run s4nCampus:test:dashboard && npm run htmlTest"
+    }
+}
